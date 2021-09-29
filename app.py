@@ -45,7 +45,7 @@ def predict():
                 y_pred = model.predict([b])
                 return render_template('prediction.html', msg="success", op=y_pred)
             except:
-                return render_template('prediction.html',msg="unsuccess")
+                pass
         return render_template('prediction.html',msg="unsuccess")
 
 if __name__ == '__main__':
