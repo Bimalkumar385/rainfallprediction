@@ -213,14 +213,6 @@
 </nav>
 <br><br><h1 align="center">PREDICT THE OUTCOME</h1><br><br>
 <div>
-  {% if msg=="unsuccess" %}
-        <br>
-        <div class="container">
-        <div class="alert alert-warning">
-        <strong><center style="font-size:50px">Warning!!!</center></strong><center>UPLOAD DATASET TO Predict</center>
-        </div></div>
-  {% else %}
-
         <div align="center">
     <div>
         <form action="/predict" method="POST" enctype="multipart/form-data" autocomplete="off">
@@ -273,9 +265,7 @@
                 </div>
             {% endif %}
 
-     {% endif %}
-        {% endif %}
-
+         {% endif %}
     </div>
 
 
