@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import joblib
+import numpy as np
 
 app = Flask(__name__)
 
@@ -12,31 +13,31 @@ def index():  # put application's code here
 def predict():
         b = []
         if request.method == "POST":
-            Year = int(request.form['year'])
+            Year = np.int32(request.form['year'])
 
-            Month = int(request.form['month'])
+            Month = np.int32(request.form['month'])
 
-            Day = int(request.form['day'])
+            Day = np.int32(request.form['day'])
 
-            MinTemp = float(request.form['mintemp'])
+            MinTemp = np.float32(request.form['mintemp'])
 
-            MaxTemp = float(request.form['maxtemp'])
+            MaxTemp = np.float32(request.form['maxtemp'])
 
-            Humidity9am = float(request.form['humidity9'])
+            Humidity9am = np.float32(request.form['humidity9'])
 
-            Humidity3pm = float(request.form['humidity3'])
+            Humidity3pm = np.float32(request.form['humidity3'])
 
-            Pressure9am = float(request.form['pressure9'])
+            Pressure9am = np.float32(request.form['pressure9'])
 
-            Pressure3pm = float(request.form['pressure3'])
+            Pressure3pm = np.float32(request.form['pressure3'])
 
-            Temp9am = float(request.form['temp9'])
+            Temp9am = np.float32(request.form['temp9'])
 
-            Temp3pm = float(request.form['temp3'])
+            Temp3pm = np.float32(request.form['temp3'])
 
-            WindSpeed9am = float(request.form['wind9'])
+            WindSpeed9am = np.float32(request.form['wind9'])
 
-            WindSpeed3pm = float(request.form['wind3'])
+            WindSpeed3pm = np.float32(request.form['wind3'])
 
             b.extend([ Year, Month, Day, MinTemp, MaxTemp, Humidity9am, Humidity3pm,
                       Pressure9am, Pressure3pm, Temp9am, Temp3pm, WindSpeed9am, WindSpeed3pm])
