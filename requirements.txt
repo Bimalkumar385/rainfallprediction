@@ -4,7 +4,7 @@ Jinja2
 MarkupSafe
 werkzeug
 pandas
-sklearn==0.18.1
+sklearn==0.19.1
 numpy
 scipy
 joblib
